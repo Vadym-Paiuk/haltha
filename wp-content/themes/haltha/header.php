@@ -23,7 +23,7 @@
             <?php if( is_front_page() ): ?>
 	            <?php if ( !empty( $header['logo_white'] ) ): ?>
                     <div class="logo header__logo">
-                        <a href="/">
+                        <a href="<?php echo pll_home_url(); ?>">
 				            <?php echo wp_get_attachment_image( $header['logo_white'], 'full' ); ?>
                         </a>
                     </div>
