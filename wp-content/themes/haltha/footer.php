@@ -1,4 +1,10 @@
 <?php $footer = get_field( 'footer', 'options' ); ?>
+
+
+<?php if( !is_front_page() ): ?>
+    </main>
+<?php endif; ?>
+
 <footer class="footer block">
     <div class="container">
         <div class="footer__row row">
@@ -11,7 +17,8 @@
                     </div>
 	            <?php endif; ?>
                 <div class="footer__subscribe">
-                    <form class="subscribe">
+                    <form class="subscribe js-form-subscribe">
+                        <input type="hidden" name="action" value="subscribe_yespo">
 	                    <?php if ( !empty( $footer['subscribe_form_title'] ) ): ?>
                             <h6 class="subscribe__title">
 			                    <?php echo $footer['subscribe_form_title']; ?>
@@ -19,7 +26,7 @@
 	                    <?php endif; ?>
 
                         <div class="subscribe__inner">
-                            <input type="email" class="subscribe__input" placeholder="Email" required>
+                            <input type="email" name="email" class="subscribe__input" placeholder="<?php _e( 'Email', 'haltha' ); ?>" required>
                             <button class="subscribe__btn btn btn-primary btn-circle">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.025 4.94165L17.0833 9.99998L12.025 15.0583" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -129,7 +136,7 @@
                 </div>
             <?php endif; ?>
 	        <?php if ( !empty( $footer['socials'] ) ): ?>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-auto">
                     <nav class="social">
                         <?php foreach ( $footer['socials'] as $social ): ?>
                             <a href="<?php echo $social['link']; ?>" class="social__item btn btn-white btn-circle" target="_blank">
@@ -148,7 +155,7 @@
                 </div>
 	        <?php endif; ?>
 
-            <div class="col-md-6 col-lg-6 col-xl-4 footer__privacy">
+            <div class="col-md-6 col-lg-auto footer__privacy">
 	            <?php
 		            wp_nav_menu( [
 			            'theme_location'  => 'privacy',

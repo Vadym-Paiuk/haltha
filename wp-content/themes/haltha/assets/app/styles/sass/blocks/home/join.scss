@@ -24,7 +24,7 @@
         background-color: var(--bg-light-secondary);
         border-radius: 24px;
         padding: 1.5rem;
-        height: 600px;
+        height: 450px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -32,6 +32,9 @@
         transition: all 400ms;
         &:not(:last-child) {
             margin-right: 8px;
+        }
+        @media screen and (max-width: 1199px) {
+            height: 500px;
         }
 
 
@@ -69,7 +72,7 @@
             height: 56px;
             font-size: 0;
             line-height: 0;
-            
+
         }
         &-btn {
             padding: 16px;
@@ -112,7 +115,7 @@
             transition: all 400ms 400ms;
             margin-top: 1rem;
 
-   
+
 
         }
         &.active &-btn {
@@ -153,7 +156,7 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
-  
+
             // &-text {
             //     margin-bottom: 20px;
             // }
@@ -186,11 +189,11 @@
             &.active &-name {
                 font-size: 1.25rem;
             }
-     
+
             &.active &-btn {
                 max-width: 168px;
             }
-            
+
         }
 
     }

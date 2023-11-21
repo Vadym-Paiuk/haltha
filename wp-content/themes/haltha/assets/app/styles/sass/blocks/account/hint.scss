@@ -1,0 +1,99 @@
+.hint {
+	position: relative;
+	z-index: 1;
+	
+	&-select {
+		border: 1px solid rgba($color: #000000, $alpha: 0.16);
+		background-color: #fff;
+		border-radius: 24px;
+		padding: 0.875rem 1.5rem;
+		margin-bottom: 20px;
+		cursor: pointer;
+		display: flex;
+		gap: 10px;
+		max-height: 56px;
+		
+		& input {
+			width: 100%;
+			border: none;
+			outline: none;
+		}
+		
+		& .error-message {
+			position: absolute;
+			bottom: -25px;
+			left: 0;
+		}
+		
+		& .btn {
+			padding: 0 10px;
+		}
+	}
+	
+	.selected {
+		z-index: 7;
+		background-color: #fff;
+		border: 1px solid rgba(0, 0, 0, .16);
+		border-radius: 24px;
+		padding: 0.875rem 1.5rem;
+		position: relative;
+	}
+	
+	.options {
+		display: none;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 60px;
+		max-height: 250px;
+		overflow-y: auto;
+		z-index: 10;
+		background-color: #fff;
+		border-radius: 24px;
+		border: 1px solid rgba(0, 0, 0, .16);
+		padding: 0.875rem 1.5rem;
+		box-shadow: 0px 30px 30px rgba($color: #000000, $alpha: 0.04);
+		cursor: pointer;
+	}
+	
+	&.open .options {
+		display: block;
+	}
+	
+	& .choices {
+		display: flex;
+		flex-direction: column;
+		
+		& .choice {
+			& .choice-row {
+				position: relative;
+				display: flex;
+				gap: 10px;
+				
+				& .choice-delete {
+					color: #8f1919;
+					cursor: pointer;
+					right: 12px;
+					width: 12px;
+					
+					&:before, &:after {
+						position: absolute;
+						content: ' ';
+						height: 12px;
+						width: 2px;
+						background-color: #ed2b2b;
+						top: 7px;
+					}
+					
+					&:before {
+						transform: rotate(45deg);
+					}
+					
+					&:after {
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+	}
+}

@@ -91,6 +91,7 @@
         margin: 0 1px;
         font-weight: 700;
         font-size: 12px;
+        cursor: pointer;
         &.current {
             background-color: var(--bg-light-septenary);
         }

@@ -1,22 +1,20 @@
 .promo {
-
     color: var(--text-light-quaternary);
     background-color: var(--bg-light-primary);
     overflow: hidden;
     &__clip {
         &-content {
-            padding-top: 350px;
-            padding-bottom: 64px;
+            padding-top: 40vh;
             background-color: var(--bg-light-primary);
         }
         &-img {
             img {
                 max-width: unset;
                 height: 100%;
+                object-fit: cover;
             }
         }
     }
-
     &__title {
         margin-bottom: 1.5rem;
         span {
@@ -35,8 +33,9 @@
             margin-right: 8px;
         }
     }
-
-
+    &__row {
+        min-height: 100vh;
+    }
 
     @media screen and (max-width: 991px) and (min-width: 768px) {
         &__clip {

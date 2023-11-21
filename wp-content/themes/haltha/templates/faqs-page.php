@@ -3,8 +3,6 @@
 	get_header();
 	$fields = get_field( 'fields' );
 ?>
-
-<main class="page">
     
     <section class="faqs">
     	<div class="container">
@@ -26,7 +24,5 @@
     </section>
     
     <?php get_template_part( 'parts/contact-us', 'section' ); ?>
-    
-</main>
 
 <?php get_footer(); ?>

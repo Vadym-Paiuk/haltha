@@ -1,0 +1,16 @@
+.consent {
+	margin-bottom: 40px;
+}
+
+.signature .name {
+	float: left;
+	display: inline-block;
+	width: 50%;
+}
+
+.signature .date {
+	float: right;
+	display: inline-block;
+	width: 50%;
+	text-align: right;
+}
